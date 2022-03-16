@@ -41,7 +41,7 @@ This is the website for VCS speech-writing services.
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+1. [Bootstrap 5.1:](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the website.
 1. [Django](https://www.djangoproject.com/)
     - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.
@@ -50,7 +50,7 @@ This is the website for VCS speech-writing services.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
 
-allauth
+allauth - pre-built package that is customisable
 
 
 ### Testing User Stories from User Experience (UX) Section
