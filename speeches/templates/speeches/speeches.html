@@ -22,17 +22,19 @@
                 {% for speech in speeches %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
-                        <!-- {% if product.image %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <!-- {% if speech.image %}
+                        <a href="{% url 'speech_detail' speech.id %}">
+                            <img class="card-img-top img-fluid" src="{{ speech.image.url }}" alt="{{ speech.title }}">
                         </a>
                         {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <a href="{% url 'speech_detail' speech.id %}">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ speech.title }}">
                         </a>
                         {% endif %} -->
                         <div class="card-body pb-0">
+                            <a href="{% url 'speech_detail' speech.id %}">
                             <p class="mb-0">{{ speech.title }}</p>
+                            </a>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
