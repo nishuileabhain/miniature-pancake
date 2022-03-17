@@ -1,12 +1,18 @@
 from django.db import models
 
+
 class Speechlength(models.Model):
     title = models.CharField(max_length=50)
 
     def __str__(self):
         return self.title
 
+
 class Speech(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Speeches'
+    
     title = models.CharField(max_length=100)
     Speechlength = models.ForeignKey('Speechlength', null=False, blank=False, on_delete=models.CASCADE)
     description = models.TextField()
