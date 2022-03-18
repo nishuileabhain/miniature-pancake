@@ -1,9 +1,22 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Speech
+from django.db.models import Q
 
 def all_speeches(request):
     """ this shows every speech in the database """
     speeches = Speech.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('speeches'))
+            
+            queries = Q(title__icontains=query) | Q(description__icontains=query)
+            speeches = speeches.filter(queries)
+
     context = {
         'speeches': speeches,
     }
