@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-acb-y31n0dfx3y&u$v4i3-!kf8+h=u5kzj=gly^1j0tg0+tx_g'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['vcsservices.herokuapp.com', 'localhost']
 
@@ -120,9 +120,6 @@ else:
         }
     }
 
-# DATABASES = {
-#     'default': "dj_database_url.parse('postgres://roivlasyituljh:fd8aaa9f2e89c80ba7b3ed720cecaf8042f7b5bb595caa74eb2d8cd4681b0a7b@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d7t90t33i24lb8')"
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

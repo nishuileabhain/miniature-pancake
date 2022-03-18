@@ -1,8 +1,10 @@
-<h1 align="center">Skateclub Website</h1>
+<h1 align="center">VCS services Website</h1>
 
-[View the live project here.](https://https://django-skateclub-app.herokuapp.com/)
+[View the live project here.](https://https://vcsservices.herokuapp.com/)
 
-This is the website for VCS speech-writing services. 
+This is the website for VCS speech-writing services. The idea is that any person who has a special occasion coming up can hire a professional to write it for them.
+A further idea is to provide coaching or a form to take in details to include in the speech but for now only the skeleton structure was created.
+This project relies heavily on code from the Boutique Ado App. My idea was to take a top-down approach and then remove the unwanted features but in the end the priority was to get the database deployed.
 
 
 ## User Experience (UX)
@@ -55,28 +57,7 @@ allauth - pre-built package that is customisable
 
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
 
-    -   #### First Time Visitor Goals
-
-        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-        2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-        3. As a First Time Visitor, I want to see examples of the activities carried out by the club. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
-        4. As a First Time Visitor, I want to be able to sign up for membership.
-
-
-    -   #### Returning Visitor Goals
-
-        1. As a Returning Visitor, I want to find information about skating tricks.
-        2. As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-        3. As a Returning Visitor, I want to be able to sign up for membership.
-
-    -   #### Member Goals
-        1. As a Member, I want to check to see if there are any newly added challenges or lessons.
-        2. As a Member, I want to check to see if there are any new blog posts.
-        3. As a Member, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.
-        4. As a Member, I want to log in and out as needed.
-        5. As a Member, I want to control my plan or cancel my subscription.
 
 
 ### Further Testing
@@ -84,8 +65,7 @@ allauth - pre-built package that is customisable
 
 
 ### Known Bugs
-DEstroyed postgres database in order to recreate it in Heroku without sharing credentials
-
+the procfile prevented the app from deploying to heroku at first because Procfile was not capitalised and later because the heroku app name was used instead of the django project name
 
 ## Deployment
 
@@ -99,7 +79,9 @@ The project was deployed to Heroku using the following steps...
 4. Create app in Heroku
 ad dj database in settings.py and paste db url into settings
 Add Heroku hostname to allowed hosts in settings.py
-Create a procfile 
+back up db to a json file and then migrate and add the data in to the heroku db
+comment out the heroku db address so it doesnt get into version control
+Create a procfile
 In Heroku create a postgres database addon
 Install dj_database_url in the CLI and freeze the requirements file again
 
@@ -109,7 +91,7 @@ Install dj_database_url in the CLI and freeze the requirements file again
 ### Code
 
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+
 
 
 ### Content
@@ -118,7 +100,7 @@ Install dj_database_url in the CLI and freeze the requirements file again
 
 ### Media
 
--   All Images were created by [Rodnae Productions](https://www.pexels.com/@rodnae-prod) as available from the Pexels website. 
+-   All Images were created by the developer 
 
 ### Acknowledgements
 
