@@ -121,7 +121,7 @@ else:
     }
 
 # DATABASES = {
-#     'default': dj_database_url.parse('postgres://roivlasyituljh:fd8aaa9f2e89c80ba7b3ed720cecaf8042f7b5bb595caa74eb2d8cd4681b0a7b@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d7t90t33i24lb8')
+#     'default': "dj_database_url.parse('postgres://roivlasyituljh:fd8aaa9f2e89c80ba7b3ed720cecaf8042f7b5bb595caa74eb2d8cd4681b0a7b@ec2-52-211-158-144.eu-west-1.compute.amazonaws.com:5432/d7t90t33i24lb8')"
 # }
 
 # Password validation
