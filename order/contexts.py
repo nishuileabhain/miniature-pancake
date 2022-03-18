@@ -1,11 +1,24 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from speeches.models import Speech
 
 def order_contents(request):
     """ list of ordered items"""
     order_items = []
     total = 0
-    product_count = 0
+    speech_count = 0
+    order = request.session.get('order', {})
+
+    for item_id, quantity in order.items():
+        speech = get_object_or_404(Speech, pk=item_id)
+        total += quantity * speech.price
+        speech_count += quantity
+        order_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'speech': speech,
+        })
 
     # if total < settings.FREE_DELIVERY_THRESHOLD:
     #     delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
@@ -19,7 +32,7 @@ def order_contents(request):
     context = {
         'order_items': order_items,
         'total': total,
-        'product_count': product_count,
+        'speech_count': speech_count,
     }
 
     return context

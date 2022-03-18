@@ -1,11 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
 
 def view_order(request):
     """ A view that renders the order contents page """
 
     return render(request, 'order/order.html')
+
 
 def add_to_order(request, item_id):
     """ Add a quantity of the speech to the order """
@@ -21,4 +21,5 @@ def add_to_order(request, item_id):
 
     request.session['order'] = order
     print(request.session['order'])
+
     return redirect(redirect_url)

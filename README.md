@@ -14,7 +14,7 @@ This is the website for VCS speech-writing services.
         1. As a First Time Visitor, I want to easily understand the main purpose of the site.
         2. As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
         3. As a First Time Visitor, I want to see examples of the products on offer. I also want to locate social media links to determine how trusted and known they are.
-        4. As a First Time Visitor, I want to be able to sign up for membership.
+        4. As a First Time Visitor, I want to be able to sign up for an account.
 
 
     -   #### Returning Visitor Goals
@@ -97,6 +97,7 @@ The project was deployed to Heroku using the following steps...
 2. Log in to Heroku in the CLI
 3. Install pillow, psycopg2 and gunicorn
 4. Create app in Heroku
+ad dj database in settings.py and paste db url into settings
 Add Heroku hostname to allowed hosts in settings.py
 Create a procfile 
 In Heroku create a postgres database addon
