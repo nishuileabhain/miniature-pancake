@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from .models import Speech
+from .models import Speech, Speechlength
 from django.db.models import Q
 
 def all_speeches(request):
@@ -8,6 +8,11 @@ def all_speeches(request):
     query = None
 
     if request.GET:
+        if 'speechlength' in request.GET:
+            speechlengths = request.GET['speechlength'].split(',')
+            speeches = speeches.filter(Speechlength__title__in=speechlengths)
+            speechlengths = Speechlength.objects.filter(title__in=speechlengths)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
