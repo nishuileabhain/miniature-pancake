@@ -1,1 +1,1 @@
-web: gunicorn vcsservices.wsgi:application
+web: gunicorn vcs_services.wsgi:application
